@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">World of Hostels</string>
+    <string name="hint">Search Hostels by Name</string>
+    <string name="filters">Filters</string>
+    <string name="label1">Distance(km)</string>
+    <string name="label2">Budget(₹)</string>
+    <string name="label3">Type of Hostel</string>
+    <string name="label4">Boys</string>
+    <string name="label5">Girls</string>
+    <string name="search">SEARCH</string>
+</resources>

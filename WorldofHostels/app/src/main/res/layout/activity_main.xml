@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:inputType="text"
+        android:backgroundTint="@color/grey"
+        app:queryHint="@string/hint"
+        app:iconifiedByDefault="false">
+    </android.support.v7.widget.SearchView>
+
+    <TextView
+        android:id="@+id/filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:text="@string/filters"
+        android:textSize="@dimen/text_size_20"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/distnace_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filters"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:text="@string/label1"
+        android:textSize="@dimen/text_size_20"
+        android:textColor="@android:color/black"
+        />
+
+    <SeekBar
+        android:id="@+id/distnace"
+        android:layout_width="@dimen/length250"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distnace_label"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:max="5"/>
+
+    <TextView
+        android:id="@+id/distance_show"
+        android:layout_width="@dimen/length100"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_toRightOf="@id/distnace"
+        android:layout_below="@id/distnace_label"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/budget_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distnace"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:text="@string/label2"
+        android:textSize="@dimen/text_size_20"
+        android:textColor="@android:color/black"
+        />
+
+    <SeekBar
+        android:id="@+id/budget"
+        android:layout_width="@dimen/length250"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/budget_label"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:max="4"
+        android:min="0" />
+
+    <TextView
+        android:id="@+id/budget_show"
+        android:layout_width="@dimen/length100"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_toRightOf="@id/budget"
+        android:layout_below="@id/budget_label"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/type_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/budget"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:text="@string/label3"
+        android:textSize="@dimen/text_size_20"
+        android:textColor="@android:color/black"
+        />
+
+    <RadioGroup
+        android:id="@+id/GenderGroup"
+        android:layout_width="@dimen/length100"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type_label"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8">
+        <RadioButton
+            android:id="@+id/boys"
+            android:layout_width="@dimen/length100"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:checked="false"
+            android:text="@string/label4"
+            android:textSize="@dimen/text_size_20"
+            android:layout_marginBottom="@dimen/margin_8"/>
+        <RadioButton
+            android:id="@+id/girls"
+            android:layout_width="@dimen/length100"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:checked="false"
+            android:text="@string/label5"
+            android:textSize="@dimen/text_size_20"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:layout_below="@id/GenderGroup"
+        android:layout_centerInParent="true"
+        android:text="@string/search"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"/>
+</RelativeLayout>
